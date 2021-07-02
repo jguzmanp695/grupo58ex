@@ -9,5 +9,12 @@ public class App {
         String res = "Hola";
         double resultado2 = 25 / 3;
         float resultado3 = 58 * 21;
+
+        //Operadores unarios
+        resultado++;
+        resultado--;
+        resultado = +resultado;
+        resultado = -resultado;
+        resultado += resultado; 
     }
 }
