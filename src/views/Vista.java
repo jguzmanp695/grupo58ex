@@ -11,6 +11,7 @@ public class Vista {
         System.out.println(wallet1.saveMoney(300000));
         System.out.println(wallet1.breakLimite());
         System.out.println(wallet1.saveMoney(600000));
+        System.out.println(wallet1.establecerMeta(1500000));
     }
     
 }
