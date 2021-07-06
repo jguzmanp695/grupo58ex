@@ -5,10 +5,12 @@ public class Wallet {
     public static final int CAPACIDAD_MAXIMA = 1000000;
     private int saldo;
     private boolean tieneLimite;
+    private int meta;
 
     public Wallet() {
         super();
         saldo = 0;
+        meta = 0;
         tieneLimite = true;
     }
     
@@ -18,6 +20,25 @@ public class Wallet {
 
     public boolean getTieneLimite(){
         return tieneLimite;
+    }
+
+    public boolean establecerMeta(int value){
+        if(value == 0){
+            meta = value;
+            return true;
+        }
+        if(value < 0 || value <= saldo || value > CAPACIDAD_MAXIMA && tieneLimite){
+            return false;
+        }
+        
+    public boolean verficarMeta(){
+        if (meta == 0 || meta > saldo){
+            return false;
+        }
+        return true;
+
+    }
+
     }
 
     public void setTieneLimite(boolean newTieneLimite){
@@ -48,5 +69,8 @@ public class Wallet {
         }
         //tieneLimite = false;
         return "No se puede romper el límite de ahorro, saldo insuficiente";
+    }
+
+    
     }
 }
